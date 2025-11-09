@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penndragon Inn Homepage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;400;500;600;700&family=Explora&family=Romanesco&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">  <link rel="stylesheet" href="penndragon2styles.css">
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+
+
+       
+<Body>
+
+<div class="pagewrapper">
+
+        <header class="main-header">
+                    <div class="menu-icon-container">
+                        <i class="hamburgermenu"></i>
+                    </div>
+
+                    <nav class="main-nav">
+                        <a href="penndragonindex.html" class="nav-item">Home</a>
+                        <a href="rooms.html" class="nav-item">Rooms</a>
+                        <a href="cafe.html" class="nav-item">Cafe</a>
+                        <a href="shop.html" class="nav-item">Shop</a>
+                        <a href="local.html" class="nav-item">Local Attractions</a>
+                        <a href="contact.html" class="nav-item">Contact</a>
+                    </nav>
+        </header>
+
+                <div class="pagetitle">
+                     <h1>The Penndragon Inn</h1>
+                </div>
+                            <!------------------Form begin---------------->  
+       
+         <p> Please complete the reservation form below.<br> A member from our team will reach out to confirm your reservation and collect a room deposit. 
+        </p>  
+        <br>
+        <form class="formlines">
+        
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" value="First Name">
+            
+            <label class="formline2" for="fname">Last Name:</label>
+            <input type="text" id="fname" name="fname" value="Last Name">
+                        <!---------------Email collection -------------------->
+            <label class="formline3" for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="your email address">
+                          
+                        
+                        <!--Cottage size selection dropdown-->
+
+            <label class="formline4" for="roomtype">Cottage Size:</label>
+
+            <select id="roomtype" name="roomtype">
+                <option value=""> --Select a Cottage type--</option>
+                <option value="singleroom">Single Person Cottage</option>
+                <option value="multiroom"> Multi Room Cottage</option>
+            </select> <br>
+
+                    <!-----------Date selection----->
+            
+            <label class="formline5" for="preferreddate">Desired check in date:
+            </label>
+            <input type="date" id="date" name="date"/> <br>
+
+            <label class="formline6" for="preferreddate">Desired check out date:
+            </label>
+            <input type="date" id="date" name="date"/>
+            <br>
+
+                 <!-------------Deposit agreement--------------------->
+            <p>By selecting agree and submitting this form you are agreeing to the guest guidelines for the Penndragon Inn for the duration of your stay.</p><br>
+            <label for="agree"> Agree</label>
+            <input class="formline7" type="checkbox" id="agree" name="roomagreement" value="agree" style="align-self: center;">
+            <br>
+                      <!---------Submit button-------->
+            <input class="formbutton" type="submit" value="Submit">
+        </form> 
+
+    <footer class="main-footer">
+            <div class="footer-item animate_animated animate__pulse"> 
+                <img src="penndragonimages/penndragonlogo2.jpg" alt="Hand holding a star" class="footer-image">
+            <p class="footer-text">&copy;</p> 
+            </div>
+    </footer>
+
+</div>
+
+
+</Body>
+
+
+
+</html>

@@ -1,0 +1,415 @@
+/* --- Base Styling and Reset ---*/ 
+:root {  
+    --padding-sm: 10px;
+    --padding-lg: 20px;
+}
+
+.pagewrapper {
+box-shadow: 0px -1px 1px 16px #583318;
+background-color: #b0818a;
+padding: 15px;
+border-radius: 25px;
+position:relative;
+width: 90%;
+margin-left: auto;
+margin-right: auto;
+max-width: fit-content;
+max-height: fit-content;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  color:#583318;
+  background-color: #E5D1A4;
+  text-align: center;
+  font-family: "Tangerine", cursive;
+  font-weight: 500;
+  font-size: 40px;
+  font-style: normal;
+}
+
+h1, .cormorant-unicase-bold {
+  display: inline-block;
+  padding:20px;
+  border-color:#583318;
+  border-width: 12px;
+  background: #E5D1A4;
+  border-style: double;
+  text-align: center;
+  font-family: "Cormorant Unicase", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 50px;
+}
+
+
+.pagetitle {
+  margin-bottom: 20px;
+  opacity: 1;
+  animation-duration: 2s;
+}
+
+.animate_animated {
+    opacity: 1;
+}
+
+.subtitle {
+  margin-bottom: 20px;
+}
+
+/* --- Header and Navigation Styling --- */
+.main-header {
+    display: flex;
+    justify-content: flex-start; /* Start from the left */
+    align-items: center;
+    padding: var(--padding-sm) 0;
+    margin-bottom: var(--padding-lg);
+}
+
+/* Hamburger Icon (Always visible on mobile, hidden on desktop) */
+.menu-icon-container {
+    padding:4px;
+    background-color:#583318;
+    border-radius: 4px;
+    display: flex; 
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Navigation Links (Hidden by default on mobile) */
+.main-nav {
+    display: none; /* Hide navigation links on small screens */
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.nav-item {
+    border-color:#583318;
+    border-width: 12px;
+    background: #E5D1A4;
+    border-style:double;
+    font-family: "Cormorant Unicase", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    border-radius: 4px;
+    padding: 6px;
+    margin-left: 4px;
+    margin-right: 4px;
+    white-space: nowrap; /* Keep links from wrapping */
+    display: inline-block;
+}
+
+a{text-decoration: none;color:#583318}
+  a:hover{color: #E5D1A4;background-color:#583318}
+
+.linktorooms, .cormorant-unicase-bold {
+  display: inline;
+  border-color:#583318;
+  background: #E5D1A4;
+  border-style:double;
+  font-family: "Cormorant Unicase", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  padding:2px;
+}
+/*Nav bar animation*/
+.animate__zoomIn{
+animation-delay: 2s;
+animation-duration: 3s;
+animation-fill-mode: both;
+}
+/* --- Main Content Styling --- */
+.content-wrapper {
+    width: 100%;
+    max-width: 1000px; /* Max width for content area */
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.homeimage{
+    width: fit-content;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid;
+    /*display:flex;
+    justify-content: center;
+    align-items: center;*/
+    margin-bottom:15px;
+}
+img {
+    max-width: 100%;
+}
+
+
+/* Text Content Area */
+.text-content {
+    padding:10px;
+    margin-bottom:10px;
+}
+
+/*------- Rooms page styling -------*/
+.roomsflexcontainer {
+    display: flex;
+    /*flex-direction: column; /* Default: Stack columns vertically on mobile */
+    column-gap: 25px;
+    width: 100%;
+    max-width: 1200px; /* Optional: limit overall width on large screens */
+    margin: 0 auto;
+}
+
+.room-column {
+    flex: 1 1 100%; /* Take up 100% width on mobile */
+    background-color: #b0818a;
+    padding:10px;
+}
+
+.roominfo {
+    margin: 15px;
+}
+
+.reservationlink, .cormorant-unicase-bold {
+  display: inline;
+  border-color:#583318;
+  background: #E5D1A4;
+  border-style:double;
+  font-family: "Cormorant Unicase", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  padding:2px;
+}
+
+/*------- cafe page styling -------*/
+.menuflexcontainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.cafeimage {
+    margin-bottom: 20px;
+}
+
+.cafemenu, .cormorant-unicase-bold {
+  display: block;
+  border-color:#583318;
+  background: #E5D1A4;
+  border-style:double;
+  font-family: "Cormorant Unicase", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  padding:2px;
+  margin: 15px;
+}
+
+.cafeimage {
+    margin-bottom: 20px;
+}
+
+    /*----- shop page styling ----- */
+.currency-icon-container {
+    float: right;
+    background-color:#583318;
+    border-radius: 4px;
+    width: 30px;
+    height: 30px;
+}
+
+/* Main Gallery and Categories*/
+.product-gallery {
+    display: flex;
+    flex-direction: row;
+    /* Default: 1 column on smallest mobile screens */
+    grid-template-columns: repeat(1, 1fr); 
+    gap:10px;
+    padding-bottom: 20px;
+    width: 100%;
+    max-width: 1400px; /* Optional: limit overall width on large screens */
+    margin: 0 auto;
+}
+
+.productrow {
+    margin-bottom: 20px 0;
+}
+
+.category-title {
+  display: inline-block;
+  border-color:#583318;
+  background: #E5D1A4;
+  border-style:double;
+  font-family: "Cormorant Unicase", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  padding:2px;
+  margin-bottom: 20px;
+}
+
+/* --- Product Grid Styling (The core layout) --- */
+.product-grid {
+    display: grid;
+    /* Default: 1 column on smallest mobile screens*/
+    grid-template-columns: repeat(1, 1fr); 
+    gap:10px;
+    padding-bottom: 20px;
+} 
+
+/*Individual Product Card*/
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-color:#583318;
+    background: #E5D1A4;
+    border-style:double;
+    font-family: "Cormorant Unicase", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    padding:2px;
+}
+
+
+/*----- local attraction page styling ----- */
+.attraction, .cormorant-unicase-bold {
+  display: block;
+  border-color:#583318;
+  background: #E5D1A4;
+  border-style:double;
+  font-family: "Cormorant Unicase", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  padding:2px;
+  margin: 15px;
+}
+
+/*----- contact page styling ----- */
+.contactcontent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+     padding-bottom: 20px;
+    width: 100%;
+    max-width: 1400px; /* Optional: limit overall width on large screens */
+    margin: 0 auto;
+}
+
+.contactimage {
+    /* Use padding-bottom trick for a responsive square */
+    width: 100%;
+    margin-bottom: 25px;
+    flex-shrink: 0; /* Prevents it from shrinking prematurely */
+}
+
+.contactinfo {
+  margin-left: auto;
+  margin-right: auto;
+  border-color:#583318;
+  background: #E5D1A4;
+  border-style:double;
+  font-family: "Cormorant Unicase", serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 20px;
+  padding: 10px;
+ }
+
+ /*-----------Form page styling-------------*/
+ .formlines{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+select, input {
+ text-align: center;
+ border-color:#583318;
+ background: #E5D1A4;
+}
+
+
+.formbutton {
+  border-color:#583318;
+  background: #E5D1A4;
+  border-style:double;
+  font-family: "Cormorant Unicase", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  padding:2px;
+}
+.formbutton:hover{color: #E5D1A4;background-color:#583318; cursor: pointer;}
+
+
+
+/* --- Footer Styling --- */
+.main-footer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #b0818a;
+}
+
+.footer-item {
+    padding: 10px;
+    border-radius: 4px;
+    width: 150px; /* Fixed width for the small footer element */
+    text-align: center;
+}
+
+footer {
+    background-color: #b0818a /* White background for the footer */
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-image {
+    max-width: 100px; /* Adjust size as needed */
+    height: auto;
+    display: block; /* Removes extra space below image */
+    margin: 0 auto; /* Centers the image */
+    padding-bottom: 10px; /* Space below the image */
+}
+
+/*footer animation*/
+.animate__pulse{ animation-duration: 2s;
+animation-iteration-count: infinite;
+}
+
+/* --- Responsiveness: Desktop/Tablet View (Media Query) --- */
+@media (min-width: 768px) {
+    
+    .main-header {
+        /* Distribute the main navigation elements */
+        justify-content: space-between;
+    }
+
+    /* Hide the hamburger icon on larger screens */
+    .menu-icon-container {
+        display: none;
+    }
+
+    /* Show the navigation links */
+    .main-nav {
+        display: flex;
+        /* Center the group of links */
+        margin-left: auto; 
+    }
+}
